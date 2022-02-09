@@ -21,22 +21,8 @@ object Project2 {
     }
 
     def insertCovidData(spark: SparkSession): Unit = {
-        // val output = sc.read.format("csv").option("inferSchema", "true").option("header", "true").load("input/covid-data.csv")
-        val df = spark.read.text("input/covid-data.csv")
-        df.withColumn("")
-        df.limit(5).show()
-
-        
-
-        df.select("*")
-
-        // spark.sql("CREATE TABLE IF NOT EXISTS covid_data (iso_code STRING, continent STRING, location STRING, date STRING, total_cases LONG, new_cases LONG, total_deaths LONG, new_deaths LONG, new_tests LONG, total_tests LONG, total_vaccinations LONG, people_vaccinated LONG, people_fully_vacccinated LONG, population LONG, population_density FLOAT, median_age FLOAT, aged_65_older FLOAT, aged_70_older FLOAT, gdp_per_capita FLOAT, hospital_beds_per_thousand FLOAT, life_expectancy FLOAT)")
-
-        // spark.sql("INSERT INTO covid_data SELECT * FROM temp_data")
-
-        
+        val df = spark.read.options(Map("inferSchema" -> "true", "header" -> "true")).csv("input/covid-data.csv")        
         df.show()
-
     }
 
 }
