@@ -35,7 +35,7 @@ object Project2 {
             println("")
             println("")
             validChoice = false
-            val df = spark.read.options(Map("inferSchema" -> "true", "header" -> "true")).csv("input/covid-data_date_formatted.csv")
+            val df = spark.read.options(Map("inferSchema" -> "true", "header" -> "true")).csv("/project-2/covid-data_date_formatted.csv")
             df.createOrReplaceTempView("covid_data")
             while(validChoice == false) {
                 println(Console.MAGENTA)
