@@ -1,7 +1,8 @@
-<h2> Covid-19 Database queries Apllication Via Spark Submit </h2>
+<h2> Scala Application to Query COVID-19 Dataset Via Spark Submit </h2>
 
-A database used to query information about COVID Statistics globally.
+A program used to query information about global COVID-19 data.
 
-This application was written using Scala 2.12 and SBT 1.6.0.
+This application was written using Scala, Apache Spark, and SBT.
 
-NEED TO EDIT THIS
+The information that this application gathers focuses primarily on the relationship between mortality rates and other data such as GDP per capita, percent of population fully vaccinated, COVID-19 spread rates, etc.
+
